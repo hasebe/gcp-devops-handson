@@ -155,11 +155,11 @@ gcloud iam service-accounts create devops-handson-gsa --display-name "DevOps Han
 - Cloud Debugger Agent ロール
 
 ```bash
-gcloud projects add-iam-policy-binding {{project-id}} --member serviceAccount:devops-handson-gsa@${{project-id}}.iam.gserviceaccount.com --role roles/cloudprofiler.agent
-gcloud projects add-iam-policy-binding {{project-id}} --member serviceAccount:devops-handson-gsa@${{project-id}}.iam.gserviceaccount.com --role roles/cloudtrace.agent
-gcloud projects add-iam-policy-binding {{project-id}} --member serviceAccount:devops-handson-gsa@${{project-id}}.iam.gserviceaccount.com --role roles/monitoring.metricWriter
-gcloud projects add-iam-policy-binding {{project-id}} --member serviceAccount:devops-handson-gsa@${{project-id}}.iam.gserviceaccount.com --role roles/stackdriver.resourceMetadata.writer
-gcloud projects add-iam-policy-binding {{project-id}} --member serviceAccount:devops-handson-gsa@${{project-id}}.iam.gserviceaccount.com --role roles/clouddebugger.agent
+gcloud projects add-iam-policy-binding {{project-id}} --member serviceAccount:devops-handson-gsa@{{project-id}}.iam.gserviceaccount.com --role roles/cloudprofiler.agent
+gcloud projects add-iam-policy-binding {{project-id}} --member serviceAccount:devops-handson-gsa@{{project-id}}.iam.gserviceaccount.com --role roles/cloudtrace.agent
+gcloud projects add-iam-policy-binding {{project-id}} --member serviceAccount:devops-handson-gsa@{{project-id}}.iam.gserviceaccount.com --role roles/monitoring.metricWriter
+gcloud projects add-iam-policy-binding {{project-id}} --member serviceAccount:devops-handson-gsa@{{project-id}}.iam.gserviceaccount.com --role roles/stackdriver.resourceMetadata.writer
+gcloud projects add-iam-policy-binding {{project-id}} --member serviceAccount:devops-handson-gsa@{{project-id}}.iam.gserviceaccount.com --role roles/clouddebugger.agent
 ```
 
 <walkthrough-footnote>アプリケーションから利用する、サービスアカウントの設定が完了しました。次に GKE を利用したアプリケーション開発に進みます。</walkthrough-footnote>
